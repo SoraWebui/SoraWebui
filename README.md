@@ -8,7 +8,7 @@
 git clone git@github.com:SoraWebui/SoraWebui.git
 ```
 
-2. install dependencies
+2. Install dependencies
 
 ```bash
 cd SoraWebui && yarn
@@ -18,7 +18,7 @@ cd SoraWebui && npm install
 cd SoraWebui && pnpm install
 ```
 
-3. run dev
+3. Run it
 
 ```bash
 yarn dev
