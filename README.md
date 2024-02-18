@@ -12,12 +12,20 @@ git clone git@github.com:SoraWebui/SoraWebui.git
 
 ```bash
 cd SoraWebui && yarn
+#or
+cd SoraWebui && npm install
+#or
+cd SoraWebui && pnpm install
 ```
 
 3. run dev
 
 ```bash
 yarn dev
+#or
+npm run dev
+#or
+pnpm dev
 ```
 
 4. Open [http://localhost](http://localhost) with your browser to see it.
