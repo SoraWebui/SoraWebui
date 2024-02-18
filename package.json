@@ -1,17 +1,23 @@
 {
-  "name": "next-init-no-login-pay",
+  "name": "next-init",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 80",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.1.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "clsx": "^2.1.0",
+    "next": "14.1.0",
+    "next-intl": "^3.7.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "undici": "^6.6.2",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "typescript": "^5",

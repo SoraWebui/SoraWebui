@@ -1,0 +1,11 @@
+{
+  "IndexPage": {
+    "lang": "en",
+    "language": "简体中文",
+    "languageInChineseSimple": "简体中文",
+    "title": "简体中文",
+    "description": "简体中文",
+    "loadingText": "加载中...",
+    "loginText": "登录"
+  }
+}
