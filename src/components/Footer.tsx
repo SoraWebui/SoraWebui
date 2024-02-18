@@ -21,10 +21,10 @@ export default function Footer({
           <a href={`/${locale}`}>
             <Image
               className="h-10"
-              src="/next.svg"
+              src="/appicon.svg"
               width={32}
               height={32}
-              alt="whooper.ai"
+              alt="Sorawebui.com"
             />
           </a>
           <div className="mt-2 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
