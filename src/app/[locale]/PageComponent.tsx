@@ -17,6 +17,7 @@ const PageComponent = ({
                            h1Text: '',
                            pDescription: '',
                            soraVideoExample: '',
+                           prompt: '',
                          },
                          initVideoList = []
                        }) => {
@@ -113,7 +114,7 @@ const PageComponent = ({
                 </form>
               </div>
             </div>
-            <div className={"border-[14px] border-[#ffffff1f] object-fill w-[90%] mx-auto"}>
+            <div className={"border-[14px] border-[#ffffff1f] object-fill w-[90%] mx-auto mt-8"}>
               <div className={"mx-auto bg-white"}>
                 <div className={"pb-2 border-b-2"}>
                   <h2
@@ -134,7 +135,7 @@ const PageComponent = ({
                             ></video>
                           </div>
                           <div className={"text-gray-500"}>
-                            Prompt: {item.prompt}
+                            {currentLanguageText.prompt}: {item.prompt}
                           </div>
                         </div>
                       </li>
@@ -147,7 +148,10 @@ const PageComponent = ({
           </div>
         </div>
       </div>
-      <Footer locale={locale}/>
+      <Footer
+        locale={locale}
+        description={currentLanguageText.description}
+      />
     </>
   )
 
