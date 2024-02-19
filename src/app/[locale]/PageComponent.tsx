@@ -4,6 +4,7 @@ import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 import {useState} from "react";
 import {allVideoList, randomVideo} from "~/data/openaiVideo";
+import HeadInfo from "~/components/HeadInfo";
 
 const PageComponent = ({
                          locale = '',
@@ -65,8 +66,12 @@ const PageComponent = ({
 
   return (
     <>
-      <title>{currentLanguageText.title}</title>
-      <meta name="description" content={currentLanguageText.description}/>
+      <HeadInfo
+        title={currentLanguageText.title}
+        description={currentLanguageText.description}
+        locale={locale}
+        page={""}
+      />
       <Header locale={locale}/>
       <div>
         <div className="block overflow-hidden bg-[#020d24] bg-cover bg-center text-white"
