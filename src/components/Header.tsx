@@ -84,6 +84,9 @@ export default function Header({
                   {
                     languages.map((item) => {
                       let hrefValue = `/${item.lang}`;
+                      if (page) {
+                        hrefValue = `/${item.lang}/${page}`;
+                      }
                       return (
                         <Menu.Item key={item.lang}>
                           <Link href={hrefValue} onClick={() => checkLocalAndLoading(item.lang)}>
