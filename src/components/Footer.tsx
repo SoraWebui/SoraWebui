@@ -2,11 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navigation = {
+  product: [
+    {name: 'SoraWebui', href: 'https://sorawebui.com'},
+    {name: 'Whooper', href: 'https://whooper.ai'},
+  ],
   legal: [
     {name: 'Privacy Policy', href: '#'},
     {name: 'Terms & Conditions', href: '#'},
   ],
   social: [
+    {
+      name: 'Official',
+      href: 'https://sorawebui.com',
+      icon: () => (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+             className="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"/>
+        </svg>
+      ),
+    },
     {
       name: 'GitHub',
       href: 'https://github.com/SoraWebui/SoraWebui',
@@ -24,7 +39,8 @@ const navigation = {
 }
 
 export default function Footer({
-                                 locale = ''
+                                  locale = '',
+                                  description=''
                                }) {
   return (
     <footer className="bg-[#020d24]" aria-labelledby="footer-heading">
@@ -43,11 +59,8 @@ export default function Footer({
                 alt="Sorawebui.com"
               />
             </a>
-            <p className="text-sm leading-6 text-gray-300">
-              A browser interface for OpenAI Sora, generate text-to-video simply.
-            </p>
-            <p className="text-sm leading-6 text-gray-300">
-              Copyright © 2024 - All rights reserved.
+            <p className="text-sm text-gray-300">
+              {description}
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
@@ -75,8 +88,20 @@ export default function Footer({
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-white"></h3>
+                <h3 className="text-sm font-semibold leading-6 text-white">Product</h3>
                 <ul role="list" className="mt-6 space-y-4">
+                  {navigation.product.map((item) => {
+                      return (
+                        <li key={item.name}>
+                          <Link href={`${item.href}`}
+                                target={"_blank"}
+                                className="text-sm leading-6 text-gray-300 hover:text-[#2d6ae0]">
+                            {item.name}
+                          </Link>
+                        </li>
+                      )
+                    }
+                  )}
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">

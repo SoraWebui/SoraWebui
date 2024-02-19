@@ -17,6 +17,7 @@ export default async function IndexPage({params: {locale = ''}}) {
     h1Text: t('h1Text'),
     pDescription: t('pDescription'),
     soraVideoExample: t('soraVideoExample'),
+    prompt: t('prompt'),
   };
 
   const initVideoList = randomVideo();
