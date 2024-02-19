@@ -1,0 +1,16 @@
+{
+  "IndexPage": {
+    "lang": "en",
+    "language": "简体中文",
+    "languageInChineseSimple": "简体中文",
+    "title": "Sora Webui",
+    "description": "OpenAI Sora 的浏览器界面，可轻松生成文本到视频。",
+    "loadingText": "加载中...",
+    "buttonText": "搜索",
+    "placeholderText": "在此处输入或粘贴文本...",
+    "loginText": "登录",
+    "h1Text": "Sora Webui",
+    "pDescription": "OpenAI Sora 的浏览器界面，可轻松生成文本到视频。暂无可使用接口，所有视频均为OpenAI官网示例。",
+    "soraVideoExample": "Sora 生成的示例视频"
+  }
+}
