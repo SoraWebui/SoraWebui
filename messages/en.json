@@ -6,6 +6,7 @@
     "title": "Sora Webui",
     "description": "A browser interface for OpenAI Sora, generate text-to-video simply.",
     "loadingText": "Loading...",
+    "generateText": "Generating...",
     "buttonText": "Generate",
     "placeholderText": "Type or paste text here...",
     "loginText": "Log in",

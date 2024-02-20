@@ -11,6 +11,7 @@ export default async function IndexPage({params: {locale = ''}}) {
     title: t('title'),
     description: t('description'),
     loadingText: t('loadingText'),
+    generateText: t('generateText'),
     buttonText: t('buttonText'),
     placeholderText: t('placeholderText'),
     loginText: t('loginText'),

@@ -14,6 +14,7 @@ const PageComponent = ({
                            title: '',
                            description: '',
                            loadingText: '',
+                           generateText: '',
                            buttonText: '',
                            placeholderText: '',
                            loginText: '',
@@ -47,6 +48,9 @@ const PageComponent = ({
     const result = await response.json();
     setShowLoadingModal(false);
     if (result.data) {
+      if (!result.data[0].revised_prompt) {
+        return
+      }
       const video = {
         revised_prompt: result.data[0].revised_prompt,
         url: result.data[0].url
