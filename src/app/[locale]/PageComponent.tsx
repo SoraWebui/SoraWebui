@@ -44,7 +44,6 @@ const PageComponent = ({
       body: JSON.stringify(body)
     })
     const result = await response.json();
-    console.log(result);
     setShowLoadingModal(false);
     if (result.data) {
       const video = {

@@ -20,8 +20,6 @@ export async function POST(req: Request, res: Response) {
       authorization: `Bearer ${apiKey}`
     },
   }).then(v => v.json()).catch(err => console.log(err));
-  console.log("========");
-  console.log(result);
   return new Response(JSON.stringify(result), {
     headers: { "Content-Type": "application/json" },
     status: 200
