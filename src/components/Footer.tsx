@@ -6,8 +6,8 @@ const navigation = {
     {name: 'SoraWebui', href: 'https://sorawebui.com'}
   ],
   legal: [
-    {name: 'Privacy Policy', href: '#'},
-    {name: 'Terms & Conditions', href: '#'},
+    {name: 'Privacy Policy', href: '/privacy-policy'},
+    {name: 'Terms & Conditions', href: '/terms-of-service'},
   ],
   social: [
     {
