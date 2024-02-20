@@ -135,7 +135,7 @@ const PageComponent = ({
                       onChange={(e) => {
                         setTextStr(e.target.value);
                       }}
-                      maxLength={100}
+                      maxLength={1000}
                     />
                   </div>
                   <div className="inset-x-px bottom-1 bg-white">
