@@ -31,19 +31,19 @@ export default async function LocaleLayout({
 
   return (
     <html className="h-full" lang={locale}>
-    {/*<head>*/}
-    {/*  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHMEX3WHRJ"></script>*/}
-    {/*  <script*/}
-    {/*    dangerouslySetInnerHTML={{*/}
-    {/*      __html: `*/}
-    {/*              window.dataLayer = window.dataLayer || [];*/}
-    {/*              function gtag(){dataLayer.push(arguments);}*/}
-    {/*              gtag('js', new Date());*/}
-    {/*              gtag('config', 'G-RHMEX3WHRJ');*/}
-    {/*              `,*/}
-    {/*    }}*/}
-    {/*  />*/}
-    {/*</head>*/}
+    <head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-66T44ZVWSB"></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-66T44ZVWSB');
+                  `,
+        }}
+      />
+    </head>
     <body suppressHydrationWarning={true} className={clsx(inter.className, 'flex h-full flex-col bg-[#020d24]')}>
     <CommonProvider>
       {children}
