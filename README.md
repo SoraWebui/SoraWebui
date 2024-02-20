@@ -1,7 +1,7 @@
 # SoraWebui
 A browser interface for OpenAI Sora, generate text-to-video simply.
 
-<div align="center">
+<div align="left">
 
 English | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README.zh-CN.md)
 
