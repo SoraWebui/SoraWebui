@@ -5,6 +5,7 @@ import Footer from '~/components/Footer';
 import {useState} from "react";
 import {allVideoList, randomVideo} from "~/data/openaiVideo";
 import HeadInfo from "~/components/HeadInfo";
+import {useCommonContext} from "~/context/common-context";
 
 const PageComponent = ({
                          locale = '',
@@ -25,6 +26,7 @@ const PageComponent = ({
   const router = useRouter();
 
   const [textStr, setTextStr] = useState('');
+  const {showLoadingModal, setShowLoadingModal} = useCommonContext();
 
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
@@ -33,35 +35,27 @@ const PageComponent = ({
       setVideoList(randomVideo());
       return;
     }
-
-    // 文本框有字符
-    const resultVideoList = [];
-    // 单词数组
-    const words = textStr.split(" ");
-    for (let i = 0; i < allVideoList.length; i++) {
-      const currentVideo = allVideoList[i];
-      const currentPrompt = currentVideo.prompt.split(" ");
-      for (let j = 0; j < currentPrompt.length; j++) {
-        let check = false;
-        for (let k = 0; k < words.length; k++) {
-          if (currentPrompt[j] == words[k]) {
-            resultVideoList.push(currentVideo);
-            check = true;
-            break;
-          }
-        }
-        if (check) {
-          break;
-        }
+    setShowLoadingModal(true);
+    const body = {
+        prompt: textStr
+    };
+    const response = await fetch(`/${locale}/api/generate`, {
+      method: 'POST',
+      body: JSON.stringify(body)
+    })
+    const result = await response.json();
+    console.log(result);
+    setShowLoadingModal(false);
+    if (result.data) {
+      const video = {
+        revised_prompt: result.data[0].revised_prompt,
+        url: result.data[0].url
       }
-    }
-    if (resultVideoList.length <= 0) {
-      setVideoList(randomVideo());
-    } else {
-      setVideoList(resultVideoList);
+      setVideo(video);
     }
   }
 
+  const [video, setVideo] = useState({revised_prompt:'', url:''});
   const [videoList, setVideoList] = useState(initVideoList);
 
   return (
@@ -119,6 +113,31 @@ const PageComponent = ({
                 </form>
               </div>
             </div>
+            {
+              video.url != '' ?
+                <div className={"border-[14px] border-[#ffffff1f] object-fill w-[90%] mx-auto mt-8"}>
+                  <div className={"mx-auto bg-white"}>
+                    <h2
+                      className={"text-blue-500 pt-4 text-4xl flex justify-center items-center"}>Result</h2>
+                    <div className={"flex-col px-6 py-4"}>
+                      <div className={"flex justify-center items-center"}>
+                        <video
+                          id={"videoId" + video.revised_prompt}
+                          controls={true}
+                          autoPlay={true}
+                          src={video.url}
+                        ></video>
+                      </div>
+                      <div className={"text-gray-500"}>
+                        {currentLanguageText.prompt}: {video.revised_prompt}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                :
+                null
+            }
+
             <div className={"border-[14px] border-[#ffffff1f] object-fill w-[90%] mx-auto mt-8"}>
               <div className={"mx-auto bg-white"}>
                 <div className={"pb-2 border-b-2"}>
