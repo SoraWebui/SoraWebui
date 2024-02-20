@@ -3,8 +3,7 @@ import Link from "next/link";
 
 const navigation = {
   product: [
-    {name: 'SoraWebui', href: 'https://sorawebui.com'},
-    {name: 'Whooper', href: 'https://whooper.ai'},
+    {name: 'SoraWebui', href: 'https://sorawebui.com'}
   ],
   legal: [
     {name: 'Privacy Policy', href: '#'},
