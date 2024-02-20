@@ -6,6 +6,7 @@ import {useState} from "react";
 import {allVideoList, randomVideo} from "~/data/openaiVideo";
 import HeadInfo from "~/components/HeadInfo";
 import {useCommonContext} from "~/context/common-context";
+import {useInterval} from "ahooks";
 
 const PageComponent = ({
                          locale = '',
@@ -51,11 +52,48 @@ const PageComponent = ({
         url: result.data[0].url
       }
       setVideo(video);
+
+      // add storage
+      const videoHistoryListStr = localStorage.getItem('videoHistoryList');
+      if (!videoHistoryListStr) {
+        const videoHistoryList = [];
+        videoHistoryList.unshift(video);
+        localStorage.setItem('videoHistoryList', JSON.stringify(videoHistoryList));
+      } else {
+        const videoHistoryList = JSON.parse(videoHistoryListStr);
+        // check exist
+        let exist = false;
+        for (let i = 0; i < videoHistoryList.length; i++) {
+          const videoHistory = videoHistoryList[i];
+          if (videoHistory.revised_prompt == video.revised_prompt) {
+            exist = true;
+            return;
+          }
+        }
+        if (!exist) {
+          videoHistoryList.unshift(video);
+          // const newList = videoHistoryList.slice(0, 3);
+          localStorage.setItem('videoHistoryList', JSON.stringify(videoHistoryList));
+        }
+      }
     }
   }
 
   const [video, setVideo] = useState({revised_prompt:'', url:''});
   const [videoList, setVideoList] = useState(initVideoList);
+
+  const [videoHistoryList, setVideoHistoryList] = useState([]);
+  const [intervalLocalStorage, setIntervalLocalStorage] = useState(500);
+
+  useInterval(() => {
+    const videoHistoryListStr = localStorage.getItem('videoHistoryList');
+    if (videoHistoryListStr) {
+      const videoHistoryList = JSON.parse(videoHistoryListStr);
+      setVideoHistoryList(videoHistoryList)
+    } else {
+      setVideoHistoryList([])
+    }
+  }, intervalLocalStorage);
 
   return (
     <>
@@ -137,6 +175,39 @@ const PageComponent = ({
                 null
             }
 
+            {
+              videoHistoryList.length > 0 ?
+                <div className={"border-[14px] border-[#ffffff1f] object-fill w-[90%] mx-auto mt-8"}>
+                  <div className={"mx-auto bg-white"}>
+                    <h2
+                      className={"text-blue-500 pt-4 text-4xl flex justify-center items-center"}>History</h2>
+                    <ul role={"list"} className={"divide-y divide-gray-300"}>
+                      {
+                        videoHistoryList?.map((item, index) => (
+                          <li key={item.revised_prompt + 'index' + item.url} className={"px-6 py-4"}>
+                            <div className={"flex-col"}>
+                              <div className={"flex justify-center items-center"}>
+                                <video
+                                  id={"videoId" + item.revised_prompt}
+                                  controls={true}
+                                  autoPlay={false}
+                                  src={item.url}
+                                ></video>
+                              </div>
+                              <div className={"text-gray-500"}>
+                                {currentLanguageText.prompt}: {item.revised_prompt}
+                              </div>
+                            </div>
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                </div>
+                :
+                null
+            }
+
             <div className={"border-[14px] border-[#ffffff1f] object-fill w-[90%] mx-auto mt-8"}>
               <div className={"mx-auto bg-white"}>
                 <div className={"pb-2 border-b-2"}>
@@ -146,7 +217,7 @@ const PageComponent = ({
                 <ul role={"list"} className={"divide-y divide-gray-300"}>
                   {
                     videoList?.map((item, index) => (
-                      <li key={item.prompt + item.keywords} className={"px-6 py-4"}>
+                      <li key={item.prompt + item.videoUrl} className={"px-6 py-4"}>
                         <div className={"flex-col"}>
                           <div className={"flex justify-center items-center"}>
                             <video
