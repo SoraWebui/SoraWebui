@@ -1,14 +1,18 @@
 # SoraWebui
+A browser interface for OpenAI Sora, generate text-to-video simply.
 
 ## Quick Started
 
-1. Clone project
+### Deploy on Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSoraWebui%2FSoraWebui&project-name=SoraWebui&repository-name=SoraWebui&external-id=https%3A%2F%2Fgithub.com%2FSoraWebui%2FSoraWebui%2Ftree%2Fmain)
+
+### 1. Clone project
 
 ```bash
 git clone git@github.com:SoraWebui/SoraWebui.git
 ```
 
-2. Install dependencies
+### 2. Install dependencies
 
 ```bash
 cd SoraWebui && yarn
@@ -18,7 +22,7 @@ cd SoraWebui && npm install
 cd SoraWebui && pnpm install
 ```
 
-3. Run it
+### 3. Run it
 
 ```bash
 yarn dev
@@ -28,9 +32,5 @@ npm run dev
 pnpm dev
 ```
 
-4. Open [http://localhost](http://localhost) with your browser to see it.
+### 4. Open [http://localhost](http://localhost) with your browser to see it.
 ![success_deploy.jpg](https://sorawebui.com/success_deploy.jpg)
-
-## Deploy on Vercel
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSoraWebui%2FSoraWebui&project-name=SoraWebui&repository-name=SoraWebui&external-id=https%3A%2F%2Fgithub.com%2FSoraWebui%2FSoraWebui%2Ftree%2Fmain)
-
