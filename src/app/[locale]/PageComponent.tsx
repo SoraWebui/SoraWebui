@@ -79,7 +79,7 @@ const PageComponent = ({
           <div className="mx-auto w-full max-w-7xl px-5 mb-5">
             <div
               className="mx-auto flex max-w-4xl flex-col items-center text-center py-10">
-              <h1 className="mb-4 text-4xl font-bold md:text-6xl">{currentLanguageText.h1Text}title123</h1>
+              <h1 className="mb-4 text-4xl font-bold md:text-6xl">{currentLanguageText.h1Text}title234</h1>
               <div className="mb-5 max-w-[528px] lg:mb-8">
                 <p className="text-[#7c8aaa] text-xl">{currentLanguageText.pDescription}</p>
               </div>
