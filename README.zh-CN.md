@@ -1,7 +1,7 @@
 # SoraWebui
 OpenAI Sora 的浏览器界面，可轻松生成文本到视频。
 
-<div align="center">
+<div align="left">
 
 [English](https://github.com/SoraWebui/SoraWebui/blob/main/README.md) | 简体中文
 
