@@ -21,7 +21,7 @@ export default async function IndexPage({params: {locale = ''}}) {
     prompt: t('prompt'),
   };
 
-  const initVideoList = randomVideo();
+  const initVideoList = randomVideo(3);
 
 
   return (

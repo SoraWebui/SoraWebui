@@ -34,7 +34,7 @@ const PageComponent = ({
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (!textStr) {
-      setVideoList(randomVideo());
+      setVideoList(randomVideo(3));
       return;
     }
     setShowLoadingModal(true);
@@ -167,6 +167,7 @@ const PageComponent = ({
                           controls={true}
                           autoPlay={true}
                           src={video.url}
+                          preload={"metadata"}
                         ></video>
                       </div>
                       <div className={"text-gray-500"}>
@@ -196,6 +197,7 @@ const PageComponent = ({
                                   controls={true}
                                   autoPlay={false}
                                   src={item.url}
+                                  preload={"metadata"}
                                 ></video>
                               </div>
                               <div className={"text-gray-500"}>
@@ -230,6 +232,7 @@ const PageComponent = ({
                               autoPlay={false}
                               controlsList={"nodownload"}
                               src={item.videoUrl}
+                              preload={"metadata"}
                             ></video>
                           </div>
                           <div className={"text-gray-500"}>
