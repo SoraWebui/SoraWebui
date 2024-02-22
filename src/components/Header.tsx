@@ -14,7 +14,11 @@ import Image from "next/image";
 import GeneratingModal from "~/components/GeneratingModal";
 
 const navigation = {
-  topMenu: [],
+  topMenu: [
+    {name: 'Playground', href: '/playground'},
+    {name: 'Works', href: '/works'},
+    {name: 'Videos', href: '/videos'},
+  ],
   social: [
     {
       name: 'GitHub',
@@ -81,7 +85,7 @@ export default function Header({
               key={item.name}
               href={`/${locale}${item.href}`}
               onClick={() => setShowLoadingModal(true)}
-              className="text-sm font-semibold leading-6 text-white">
+              className="text-sm font-semibold leading-6 text-white hover:text-blue-500">
               {item.name}
             </a>
           ))}
@@ -171,7 +175,7 @@ export default function Header({
                     key={item.name}
                     href={`/${locale}${item.href}`}
                     onClick={() => setShowLoadingModal(true)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:text-blue-500"
                   >
                     {item.name}
                   </a>

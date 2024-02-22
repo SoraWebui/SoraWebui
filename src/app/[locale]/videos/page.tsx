@@ -1,8 +1,8 @@
 import PageComponent from "./PageComponent";
 import {getTranslations, unstable_setRequestLocale} from 'next-intl/server';
-import {allVideoList, randomVideo} from "~/data/openaiVideo";
+import {allVideoList} from "~/data/openaiVideo";
 
-export default async function IndexPage({params: {locale = ''}}) {
+export default async function Videos({params: {locale = ''}}) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
@@ -22,31 +22,20 @@ export default async function IndexPage({params: {locale = ''}}) {
     moreExample: tIndex('moreExample'),
   };
 
-  const tIndexQuestion = await getTranslations('indexQuestion');
-  const questionText = {
-    h2_1: tIndexQuestion('h2_1'),
-    h2_1_p1: tIndexQuestion('h2_1_p1'),
-    h2_1_p2: tIndexQuestion('h2_1_p2'),
-    h2_1_p3: tIndexQuestion('h2_1_p3'),
-    h2_1_p4: tIndexQuestion('h2_1_p4'),
-    h2_2: tIndexQuestion('h2_2'),
-    h2_2_p1: tIndexQuestion('h2_2_p1'),
-    h2_2_p2: tIndexQuestion('h2_2_p2'),
-    h2_2_p3: tIndexQuestion('h2_2_p3'),
-    h2_2_p4a: tIndexQuestion('h2_2_p4a'),
-    h2_2_p4b: tIndexQuestion('h2_2_p4b'),
+  const tVideosPage = await getTranslations('videosPage');
+  const videosLanguageText = {
+    title: tVideosPage('title'),
+    description: tVideosPage('description'),
   }
 
-  const initVideoList = randomVideo(2);
+  const initVideoList = allVideoList;
 
   return (
     <PageComponent
       locale={locale}
-      indexLanguageText={indexLanguageText}
+      videosLanguageText={videosLanguageText}
       initVideoList={initVideoList}
-      questionText={questionText}
-    >
-
-    </PageComponent>
+      indexLanguageText={indexLanguageText}
+    />
   )
 }

@@ -60,5 +60,36 @@
     "h4_7_p": "我们可能会不时更新这些条款。我们将通过电子邮件通知用户任何重大变更。",
     "h4_8": "8、联系信息：",
     "h4_8_p": "如果您对我们的隐私政策有任何疑问或关注，请联系我们："
+  },
+  "indexQuestion": {
+    "h2_1": "什么是Sora",
+    "h2_1_p1": "OpenAI的Sora模型是一种先进的人工智能，旨在将文本转换为视频。",
+    "h2_1_p2": "它根据文本描述生成逼真而富有想象力的场景，创建多个角色，并准确模拟特定动作和场景细节。",
+    "h2_1_p3": "在语言理解和视频制作方面令人印象深刻，Sora为创意专业人士提供了一个创新的新工具。",
+    "h2_1_p4": "有关更详细的信息，请访问OpenAI的官方网站。",
+    "h2_2": "什么是SoraWebui",
+    "h2_2_p1": "SoraWebui是一个开源的网络平台，可以使用OpenAI的Sora模型从文本生成视频。",
+    "h2_2_p2": "它简化了视频创建过程，方便部署和使用。",
+    "h2_2_p3": "借助SoraWebui，任何人都可以通过简单输入文本来创建视频，使其成为专业人士和视频制作爱好者的可访问工具。",
+    "h2_2_p4a": "有关更多信息，请访问SoraWebui网站 ",
+    "h2_2_p4b": " 或其GitHub仓库 "
+  },
+  "videosPage": {
+    "title": "视频：Sora 生成的视频、Sora 生成的最新视频。",
+    "description": "Sora 生成的视频，Sora 生成的最新视频。 | sorawebui.com"
+  },
+  "worksPage": {
+    "title": "作品：生成视频历史。",
+    "description": "生成视频历史。| sorawebui.com",
+    "h1Text": "SoraWebui - 作品",
+    "pDescription": "SoraWebui 是一个开源项目，通过允许用户使用文本在线生成视频，使用 OpenAI 的 Sora 模型简化视频创建，具有简单的一键网站部署功能。",
+    "generateNew": "生成新视频"
+  },
+  "playgroundPage": {
+    "title": "playground：简单生成视频。",
+    "description": "简单生成视频。| sorawebui.com",
+    "h1Text": "SoraWebui - playground",
+    "pDescription": "SoraWebui 是一个开源项目，通过允许用户使用文本在线生成视频，使用 OpenAI 的 Sora 模型简化视频创建，具有简单的一键网站部署功能。",
+    "moreWorks": "更多作品"
   }
 }
