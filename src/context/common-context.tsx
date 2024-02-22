@@ -7,6 +7,7 @@ const CommonContext = createContext(undefined);
 export const CommonProvider = ({ children }) => {
 
   const [showLoadingModal, setShowLoadingModal] = useState(false);
+  const [showGeneratingModal, setShowGeneratingModal] = useState(false);
 
 
 
@@ -14,6 +15,7 @@ export const CommonProvider = ({ children }) => {
     <CommonContext.Provider
       value={{
         showLoadingModal, setShowLoadingModal,
+        showGeneratingModal, setShowGeneratingModal,
       }}
     >
       {children}

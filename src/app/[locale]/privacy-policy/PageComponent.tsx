@@ -3,9 +3,9 @@ import Footer from '~/components/Footer';
 import HeadInfo from "~/components/HeadInfo";
 
 const PageComponent = ({
-                          locale='',
-                          data,
-                          dataIndex,
+                         locale = '',
+                         data,
+                         indexLanguageText,
                        }) => {
 
   return (
@@ -19,6 +19,7 @@ const PageComponent = ({
       <Header
         locale={locale}
         page={'privacy-policy'}
+        indexLanguageText={indexLanguageText}
       />
       <main className="w-[95%] md:w-[65%] lg:w-[55%] 2xl:w-[45%] mx-auto h-full my-8">
         <div className="p-6 prose mx-auto text-gray-300">
@@ -46,7 +47,7 @@ const PageComponent = ({
       </main>
       <Footer
         locale={locale}
-        description={dataIndex('description')}
+        description={indexLanguageText.description}
       />
     </>
   )

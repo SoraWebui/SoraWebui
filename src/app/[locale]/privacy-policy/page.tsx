@@ -8,12 +8,24 @@ export default async function PageContent({params: {locale=''}}) {
 
   const t = await getTranslations('privacyPolicy');
   const tIndex = await getTranslations('IndexPage');
-
+  const indexLanguageText = {
+    title: tIndex('title'),
+    description: tIndex('description'),
+    loadingText: tIndex('loadingText'),
+    generateText: tIndex('generateText'),
+    buttonText: tIndex('buttonText'),
+    placeholderText: tIndex('placeholderText'),
+    loginText: tIndex('loginText'),
+    h1Text: tIndex('h1Text'),
+    pDescription: tIndex('pDescription'),
+    soraVideoExample: tIndex('soraVideoExample'),
+    prompt: tIndex('prompt'),
+  };
   return (
     <PageComponent
       locale={locale}
       data={t}
-      dataIndex={tIndex}
+      indexLanguageText={indexLanguageText}
     >
     </PageComponent>
   )

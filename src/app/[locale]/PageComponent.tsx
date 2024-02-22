@@ -3,41 +3,29 @@ import {useRouter} from "next/navigation";
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 import {useState} from "react";
-import {allVideoList, randomVideo} from "~/data/openaiVideo";
+import {randomVideo} from "~/data/openaiVideo";
 import HeadInfo from "~/components/HeadInfo";
 import {useCommonContext} from "~/context/common-context";
 import {useInterval} from "ahooks";
 
 const PageComponent = ({
                          locale = '',
-                         currentLanguageText= {
-                           title: '',
-                           description: '',
-                           loadingText: '',
-                           generateText: '',
-                           buttonText: '',
-                           placeholderText: '',
-                           loginText: '',
-                           h1Text: '',
-                           pDescription: '',
-                           soraVideoExample: '',
-                           prompt: '',
-                         },
+                         indexLanguageText,
                          initVideoList = []
                        }) => {
   const router = useRouter();
 
   const [textStr, setTextStr] = useState('');
-  const {showLoadingModal, setShowLoadingModal} = useCommonContext();
+  const {setShowGeneratingModal, setShowLoadingModal} = useCommonContext();
 
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (!textStr) {
-      setVideoList(randomVideo(3));
+      setVideoList(randomVideo(5));
       return;
     }
-    setShowLoadingModal(true);
+    setShowGeneratingModal(true);
     const body = {
         prompt: textStr
     };
@@ -46,7 +34,7 @@ const PageComponent = ({
       body: JSON.stringify(body)
     })
     const result = await response.json();
-    setShowLoadingModal(false);
+    setShowGeneratingModal(false);
     if (result.data) {
       if (!result.data[0].revised_prompt) {
         return
@@ -102,21 +90,21 @@ const PageComponent = ({
   return (
     <>
       <HeadInfo
-        title={currentLanguageText.title}
-        description={currentLanguageText.description}
+        title={indexLanguageText.title}
+        description={indexLanguageText.description}
         locale={locale}
         page={""}
       />
-      <Header locale={locale}/>
+      <Header locale={locale} indexLanguageText={indexLanguageText}/>
       <div>
         <div className="block overflow-hidden bg-[#020d24] bg-cover bg-center text-white"
              style={{backgroundImage: 'https://assets.website-files.com/6502af467b2a8c4ee8159a5b/6502af467b2a8c4ee8159a77_Group%2047929.svg'}}>
           <div className="mx-auto w-full max-w-7xl px-5 mb-5">
             <div
               className="mx-auto flex max-w-4xl flex-col items-center text-center py-10">
-              <h1 className="mb-4 text-4xl font-bold md:text-6xl">{currentLanguageText.h1Text}</h1>
+              <h1 className="mb-4 text-4xl font-bold md:text-6xl">{indexLanguageText.h1Text}</h1>
               <div className="mb-5 max-w-[528px] lg:mb-8">
-                <p className="text-[#7c8aaa] text-xl">{currentLanguageText.pDescription}</p>
+                <p className="text-[#7c8aaa] text-xl">{indexLanguageText.pDescription}</p>
               </div>
             </div>
             <div>
@@ -130,7 +118,7 @@ const PageComponent = ({
                       name="description"
                       id="description"
                       className="block w-full resize-none border-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 text-lg pt-4 pl-4"
-                      placeholder={currentLanguageText.placeholderText}
+                      placeholder={indexLanguageText.placeholderText}
                       value={textStr}
                       onChange={(e) => {
                         setTextStr(e.target.value);
@@ -146,7 +134,7 @@ const PageComponent = ({
                           type="submit"
                           className="w-full inline-flex justify-center items-center rounded-md bg-[#2d6ae0] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-800"
                         >
-                          {currentLanguageText.buttonText}
+                          {indexLanguageText.buttonText}
                         </button>
                       </div>
                     </div>
@@ -171,7 +159,7 @@ const PageComponent = ({
                         ></video>
                       </div>
                       <div className={"text-gray-500"}>
-                        {currentLanguageText.prompt}: {video.revised_prompt}
+                        {indexLanguageText.prompt}: {video.revised_prompt}
                       </div>
                     </div>
                   </div>
@@ -185,7 +173,7 @@ const PageComponent = ({
                 <div className={"border-[14px] border-[#ffffff1f] object-fill w-[90%] mx-auto mt-8"}>
                   <div className={"mx-auto bg-white"}>
                     <h2
-                      className={"text-blue-500 pt-4 text-4xl flex justify-center items-center"}>History</h2>
+                      className={"text-blue-500 pt-4 text-4xl flex justify-center items-center"}>Works</h2>
                     <ul role={"list"} className={"divide-y divide-gray-300"}>
                       {
                         videoHistoryList?.map((item, index) => (
@@ -201,7 +189,7 @@ const PageComponent = ({
                                 ></video>
                               </div>
                               <div className={"text-gray-500"}>
-                                {currentLanguageText.prompt}: {item.revised_prompt}
+                                {indexLanguageText.prompt}: {item.revised_prompt}
                               </div>
                             </div>
                           </li>
@@ -218,7 +206,7 @@ const PageComponent = ({
               <div className={"mx-auto bg-white"}>
                 <div className={"pb-2 border-b-2"}>
                   <h2
-                    className={"text-blue-500 pt-4 text-4xl flex justify-center items-center"}>{currentLanguageText.soraVideoExample}</h2>
+                    className={"text-blue-500 pt-4 text-4xl flex justify-center items-center"}>{indexLanguageText.soraVideoExample}</h2>
                 </div>
                 <ul role={"list"} className={"divide-y divide-gray-300"}>
                   {
@@ -236,7 +224,7 @@ const PageComponent = ({
                             ></video>
                           </div>
                           <div className={"text-gray-500"}>
-                            {currentLanguageText.prompt}: {item.prompt}
+                            {indexLanguageText.prompt}: {item.prompt}
                           </div>
                         </div>
                       </li>
@@ -251,7 +239,7 @@ const PageComponent = ({
       </div>
       <Footer
         locale={locale}
-        description={currentLanguageText.description}
+        description={indexLanguageText.description}
       />
     </>
   )

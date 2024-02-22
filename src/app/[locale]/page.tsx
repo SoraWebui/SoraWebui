@@ -6,28 +6,28 @@ export default async function IndexPage({params: {locale = ''}}) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
-  const t = await getTranslations('IndexPage');
-  const currentLanguageText = {
-    title: t('title'),
-    description: t('description'),
-    loadingText: t('loadingText'),
-    generateText: t('generateText'),
-    buttonText: t('buttonText'),
-    placeholderText: t('placeholderText'),
-    loginText: t('loginText'),
-    h1Text: t('h1Text'),
-    pDescription: t('pDescription'),
-    soraVideoExample: t('soraVideoExample'),
-    prompt: t('prompt'),
+  const tIndex = await getTranslations('IndexPage');
+  const indexLanguageText = {
+    title: tIndex('title'),
+    description: tIndex('description'),
+    loadingText: tIndex('loadingText'),
+    generateText: tIndex('generateText'),
+    buttonText: tIndex('buttonText'),
+    placeholderText: tIndex('placeholderText'),
+    loginText: tIndex('loginText'),
+    h1Text: tIndex('h1Text'),
+    pDescription: tIndex('pDescription'),
+    soraVideoExample: tIndex('soraVideoExample'),
+    prompt: tIndex('prompt'),
   };
 
-  const initVideoList = randomVideo(3);
+  const initVideoList = randomVideo(5);
 
 
   return (
     <PageComponent
       locale={locale}
-      currentLanguageText={currentLanguageText}
+      indexLanguageText={indexLanguageText}
       initVideoList={initVideoList}
     >
 
