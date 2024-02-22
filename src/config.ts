@@ -4,17 +4,20 @@ export const locales = ['en', 'zh', 'ja'] as const;
 
 export const languages = [
   {
+    code: "en-US",
     lang: "en",
     language: "English",
   },
   {
+    code: "zh-CN",
     lang: "zh",
     language: "简体中文",
   },
   {
+    code: "ja-JP",
     lang: "ja",
     language: "日本語",
-  },
+  }
 ]
 
 export const pathnames = {
@@ -26,3 +29,10 @@ export const localePrefix = 'as-needed';
 
 export type AppPathnames = keyof typeof pathnames;
 
+export const getLanguageByLang = (lang) => {
+  for (let i = 0; i < languages.length; i++) {
+    if (lang == languages[i].lang) {
+      return  languages[i];
+    }
+  }
+}

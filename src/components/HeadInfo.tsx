@@ -1,4 +1,4 @@
-import {languageList} from "~/configs/supportLanguage";
+import { languages } from "~/config";
 
 const HeadInfo = ({
                     title = "",
@@ -11,7 +11,7 @@ const HeadInfo = ({
       <title>{title}</title>
       <meta name="description" content={description}/>
       {
-        languageList.map((item) => {
+        languages.map((item) => {
           const currentPage = page;
           let hrefLang = item.code;
           if (item.lang == 'en') {
@@ -25,7 +25,7 @@ const HeadInfo = ({
         })
       }
       {
-        languageList.map((item) => {
+        languages.map((item) => {
           const currentPage = page;
           let hrefLang = item.code;
           let href = `${process.env.NEXT_PUBLIC_SITE_URL}/${item.lang}${currentPage}`;
