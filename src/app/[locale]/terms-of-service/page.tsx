@@ -20,6 +20,7 @@ export default async function PageContent({params: {locale = ''}}) {
     pDescription: tIndex('pDescription'),
     soraVideoExample: tIndex('soraVideoExample'),
     prompt: tIndex('prompt'),
+    moreExample: tIndex('moreExample'),
   };
 
   return (

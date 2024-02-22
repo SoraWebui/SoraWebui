@@ -147,7 +147,7 @@ const PageComponent = ({
                 <div className={"border-[14px] border-[#ffffff1f] object-fill w-[90%] mx-auto mt-8"}>
                   <div className={"mx-auto bg-white"}>
                     <h2
-                      className={"text-blue-500 pt-4 text-4xl flex justify-center items-center"}>Result</h2>
+                      className={"text-blue-500 pt-4 text-4xl flex justify-center items-center"}>{indexLanguageText.soraResultTitle}</h2>
                     <div className={"flex-col px-6 py-4"}>
                       <div className={"flex justify-center items-center"}>
                         <video
@@ -173,7 +173,7 @@ const PageComponent = ({
                 <div className={"border-[14px] border-[#ffffff1f] object-fill w-[90%] mx-auto mt-8"}>
                   <div className={"mx-auto bg-white"}>
                     <h2
-                      className={"text-blue-500 pt-4 text-4xl flex justify-center items-center"}>Works</h2>
+                      className={"text-blue-500 pt-4 text-4xl flex justify-center items-center"}>{indexLanguageText.soraWorksTitle}</h2>
                     <ul role={"list"} className={"divide-y divide-gray-300"}>
                       {
                         videoHistoryList?.map((item, index) => (
