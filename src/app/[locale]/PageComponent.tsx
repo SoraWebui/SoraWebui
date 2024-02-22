@@ -104,6 +104,12 @@ const PageComponent = ({
               <div className="mb-5 max-w-[528px] lg:mb-8">
                 <p className="text-[#7c8aaa] text-xl">{indexLanguageText.pDescription}</p>
               </div>
+              <a
+                href="https://www.producthunt.com/posts/sorawebui?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-sorawebui"
+                target="_blank"><img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=440945&theme=light"
+                alt="SoraWebui - Open&#0045;source&#0032;Sora&#0032;Web&#0032;Client | Product Hunt"
+              /></a>
             </div>
             <div>
               <div
