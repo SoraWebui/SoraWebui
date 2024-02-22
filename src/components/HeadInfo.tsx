@@ -1,9 +1,9 @@
 import {languageList} from "~/configs/supportLanguage";
 
 const HeadInfo = ({
-                    title= "",
-                    description= "",
-                    page="",
+                    title = "",
+                    description = "",
+                    page = "",
                     locale = "en"
                   }) => {
   return (

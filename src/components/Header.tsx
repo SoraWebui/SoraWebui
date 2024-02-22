@@ -1,7 +1,7 @@
 'use client'
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import {useState} from 'react'
+import {Dialog} from '@headlessui/react'
+import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 import {GlobeAltIcon} from '@heroicons/react/24/outline'
 import {Fragment} from 'react'
 import {Menu, Transition} from '@headlessui/react'
@@ -14,8 +14,7 @@ import Image from "next/image";
 import GeneratingModal from "~/components/GeneratingModal";
 
 const navigation = {
-  topMenu: [
-  ],
+  topMenu: [],
   social: [
     {
       name: 'GitHub',
@@ -140,8 +139,9 @@ export default function Header({
         </Menu>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-10"/>
+        <Dialog.Panel
+          className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href={`/${locale}`} className="-m-1.5 p-1.5" onClick={() => setShowLoadingModal(true)}>
               <Image className="h-8 w-auto" src="/appicon.svg" alt="sorawebui.com" width={32} height={32}/>

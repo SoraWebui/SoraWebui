@@ -13,13 +13,13 @@ const navigation = {
 
 export default function Footer({
                                  locale = '',
-                                 description=''
+                                 description = ''
                                }) {
   return (
     <footer className="bg-[#020d24]" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">
+      <div id="footer-heading" className="sr-only">
         Footer
-      </h2>
+      </div>
       <div className="mx-auto max-w-7xl px-6 py-4">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
@@ -39,13 +39,13 @@ export default function Footer({
           <div className="mt-2 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-white"></h3>
+                <div className="text-sm font-semibold leading-6 text-white"></div>
                 <ul role="list" className="mt-6 space-y-4">
 
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white"></h3>
+                <div className="text-sm font-semibold leading-6 text-white"></div>
                 <ul role="list" className="mt-6 space-y-4">
 
                 </ul>
@@ -53,7 +53,7 @@ export default function Footer({
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Product</h3>
+                <div className="text-sm font-semibold leading-6 text-white">Product</div>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.product.map((item) => {
                       return (
@@ -70,7 +70,7 @@ export default function Footer({
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
+                <div className="text-sm font-semibold leading-6 text-white">Legal</div>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => {
                       let hrefTo = `/${locale}${item.href}`;

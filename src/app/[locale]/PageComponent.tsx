@@ -27,7 +27,7 @@ const PageComponent = ({
     }
     setShowGeneratingModal(true);
     const body = {
-        prompt: textStr
+      prompt: textStr
     };
     const response = await fetch(`/${locale}/api/generate`, {
       method: 'POST',
@@ -71,7 +71,7 @@ const PageComponent = ({
     }
   }
 
-  const [video, setVideo] = useState({revised_prompt:'', url:''});
+  const [video, setVideo] = useState({revised_prompt: '', url: ''});
   const [videoList, setVideoList] = useState(initVideoList);
 
   const [videoHistoryList, setVideoHistoryList] = useState([]);

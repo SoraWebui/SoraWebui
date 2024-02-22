@@ -1,10 +1,10 @@
-import { Fragment, useRef, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import {Fragment, useRef, useState} from 'react'
+import {Dialog, Transition} from '@headlessui/react'
 import {useCommonContext} from "~/context/common-context";
 
 export default function GeneratingModal({
-                                       generatingText,
-                                     }) {
+                                          generatingText,
+                                        }) {
 
   const cancelButtonRef = useRef(null);
   const {showGeneratingModal, setShowGeneratingModal} = useCommonContext();
@@ -21,7 +21,7 @@ export default function GeneratingModal({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"/>
         </Transition.Child>
 
         <div className="fixed inset-0 z-30 overflow-y-auto">

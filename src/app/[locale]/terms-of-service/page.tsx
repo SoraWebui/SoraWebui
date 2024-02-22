@@ -2,7 +2,7 @@ import {getTranslations, unstable_setRequestLocale} from 'next-intl/server';
 
 import PageComponent from './PageComponent';
 
-export default async function PageContent({params: {locale=''}}) {
+export default async function PageContent({params: {locale = ''}}) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
