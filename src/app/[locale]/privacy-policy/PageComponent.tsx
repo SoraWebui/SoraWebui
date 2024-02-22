@@ -40,7 +40,7 @@ const PageComponent = ({
           <p>{data('h4_5_p')}</p>
           <h4 className={"text-white font-bold"}>{data('h4_6')}</h4>
           <p>
-            {data('h4_6_p')}{" "}<a href="mailto:hello@sorawebui.com" className={"text-white"}>hello@sorawebui.com</a>.
+            {data('h4_6_p')}{" "}<a href="mailto:hi@sorawebui.com" className={"text-white"}>hi@sorawebui.com</a>.
           </p>
         </div>
       </main>
