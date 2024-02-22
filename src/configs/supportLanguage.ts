@@ -9,6 +9,11 @@ export const languageList = [
     code: "zh-CN",
     lang: "zh",
     language: "简体中文",
+  },
+  {
+    code: "ja-JP",
+    lang: "ja",
+    language: "日本語",
   }
 ]
 
