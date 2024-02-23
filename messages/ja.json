@@ -9,7 +9,6 @@
     "generateText": "生成中...",
     "buttonText": "生成する",
     "placeholderText": "ここにテキストを入力または貼り付けしてください...",
-    "loginText": "ログイン",
     "h1Text": "SoraWebui",
     "pDescription": "SoraWebuiは、ユーザーがテキストを使用してオンラインでビデオを生成できるようにすることで、ビデオの作成を簡素化するオープンソースプロジェクトです。OpenAIのSoraモデルを使用して、簡単なワンクリックのWebサイトの展開を特色としています。",
     "soraVideoExample": "Soraによって生成された例のビデオ",

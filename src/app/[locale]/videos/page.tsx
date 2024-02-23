@@ -14,7 +14,6 @@ export default async function Videos({params: {locale = ''}}) {
     generateText: tIndex('generateText'),
     buttonText: tIndex('buttonText'),
     placeholderText: tIndex('placeholderText'),
-    loginText: tIndex('loginText'),
     h1Text: tIndex('h1Text'),
     pDescription: tIndex('pDescription'),
     soraVideoExample: tIndex('soraVideoExample'),
