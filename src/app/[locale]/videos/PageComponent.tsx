@@ -8,7 +8,6 @@ const PageComponent = ({
                          locale = '',
                          videosLanguageText,
                          indexLanguageText,
-                         initVideoList = []
                        }) => {
 
   const handleMouseEnter = (event) => {

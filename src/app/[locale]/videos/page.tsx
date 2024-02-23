@@ -27,13 +27,10 @@ export default async function Videos({params: {locale = ''}}) {
     description: tVideosPage('description'),
   }
 
-  const initVideoList = allVideoList;
-
   return (
     <PageComponent
       locale={locale}
       videosLanguageText={videosLanguageText}
-      initVideoList={initVideoList}
       indexLanguageText={indexLanguageText}
     />
   )
