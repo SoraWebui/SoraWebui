@@ -55,5 +55,23 @@ pnpm dev
 ![success_deploy.jpg](https://sorawebui.com/success_deploy.jpg)
 
 
-### Important
+# Important
 SoraWebui requires [FakeSoraAPI](https://github.com/SoraWebui/FakeSoraAPI) to function properly.
+
+
+# Project Plan
+- ✅ Generate video by words(Keyword matching existing Sora videos):
+
+  You can see this feature in main branch or tag version-0.1
+
+- [ ] Login with Google:
+
+  Coming soon
+
+- [ ] Stripe payment：
+
+  Coming soon
+
+- [ ] Add OpenAI’s Sora API：
+
+  Waiting for OpenAI to open Sora's API, then we will launch this feature.

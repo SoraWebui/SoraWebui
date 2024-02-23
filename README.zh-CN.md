@@ -55,5 +55,23 @@ pnpm dev
 ![success_deploy.jpg](https://sorawebui.com/success_deploy.jpg)
 
 
-### 重要事项
+# 重要事项
 SoraWebui 需要 [FakeSoraAPI](https://github.com/SoraWebui/FakeSoraAPI) 才能正常运行。
+
+
+# 项目计划
+- ✅ 通过文字生成视频（关键词匹配已有的Sora视频）:
+
+  您可以在主分支或标签 version-0.1 中体验该功能
+
+- [ ] 使用谷歌登录:
+
+  即将推出
+
+- [ ] Stripe支付：
+
+  即将推出
+
+- [ ] 添加 OpenAI 的 Sora API：
+
+  等待 OpenAI 开放 Sora 的 API，随后我们就会推出本功能.
