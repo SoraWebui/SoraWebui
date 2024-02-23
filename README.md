@@ -8,7 +8,7 @@ English | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README
 # Project Plan
 - ✅ Generate video by words(Use [FakeSoraAPI](https://github.com/SoraWebui/FakeSoraAPI)):
 
-  You can see this feature in main branch or tag version-0.1
+  You can see this feature in 👉 [main](https://github.com/SoraWebui/SoraWebui/tree/main) or 👉 [version-0.1](https://github.com/SoraWebui/SoraWebui/releases/tag/version-0.1)
 
 - [ ] Login with Google:
 

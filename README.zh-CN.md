@@ -7,7 +7,7 @@ SoraWebui 是一个开源项目，允许用户使用 OpenAI 的 Sora 模型使�
 # 项目计划
 - ✅ 通过文字生成视频（使用[FakeSoraAPI](https://github.com/SoraWebui/FakeSoraAPI)）:
 
-  您可以在主分支或标签 version-0.1 中体验该功能
+  您可以在 👉 [main](https://github.com/SoraWebui/SoraWebui/tree/main) 或 👉 [version-0.1](https://github.com/SoraWebui/SoraWebui/releases/tag/version-0.1) 中体验该功能
 
 - [ ] 使用谷歌登录:
 
