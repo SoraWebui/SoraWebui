@@ -8,6 +8,7 @@ English | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README
 
 </div>
 
+
 # Project Plan
 - ✅ Generate video by words(Use [FakeSoraAPI](https://github.com/SoraWebui/FakeSoraAPI)):
 
@@ -23,7 +24,8 @@ English | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README
 
 - [ ] Add OpenAI’s Sora API：
 
-  Waiting for OpenAI to open Sora's API, then we will launch this feature.
+  Waiting for OpenAI launch Sora's API, then we will launch this feature.
+
 
 ## Quick Started
 
