@@ -74,4 +74,4 @@ SoraWebui 需要 [FakeSoraAPI](https://github.com/SoraWebui/FakeSoraAPI) 才能�
 
 - [ ] 添加 OpenAI 的 Sora API：
 
-  等待 OpenAI 开放 Sora 的 API，随后我们就会推出本功能.
+  等待 OpenAI 开放 Sora 的 API，随后我们就会推出该功能.
