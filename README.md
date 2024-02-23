@@ -8,6 +8,23 @@ English | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README
 
 </div>
 
+# Project Plan
+- ✅ Generate video by words(Use [FakeSoraAPI](https://github.com/SoraWebui/FakeSoraAPI)):
+
+  You can see this feature in main branch or tag version-0.1
+
+- [ ] Login with Google:
+
+  Coming soon
+
+- [ ] Stripe payment：
+
+  Coming soon
+
+- [ ] Add OpenAI’s Sora API：
+
+  Waiting for OpenAI to open Sora's API, then we will launch this feature.
+
 ## Quick Started
 
 ### Deploy on Vercel
@@ -58,20 +75,3 @@ pnpm dev
 # Important
 SoraWebui requires [FakeSoraAPI](https://github.com/SoraWebui/FakeSoraAPI) to function properly.
 
-
-# Project Plan
-- ✅ Generate video by words(Keyword matching existing Sora videos):
-
-  You can see this feature in main branch or tag version-0.1
-
-- [ ] Login with Google:
-
-  Coming soon
-
-- [ ] Stripe payment：
-
-  Coming soon
-
-- [ ] Add OpenAI’s Sora API：
-
-  Waiting for OpenAI to open Sora's API, then we will launch this feature.
