@@ -76,8 +76,9 @@ NEXTAUTH_URL=http://localhost
 ```
 ### 4. 额外的配置
 
-> a. Google auth config 👉 [Google-Auth-Help](https://github.com/SoraWebui/SoraWebui/blob/login/help/Google-Auth.zh-CN.md)
-> b. vercel postgres config 👉 [vercel-postgres-Help](https://github.com/SoraWebui/SoraWebui/blob/login/help/vercel-postgres.zh-CN.md)
+1) Google auth config 👉 [Google-Auth-Help](https://github.com/SoraWebui/SoraWebui/blob/login/help/Google-Auth.zh-CN.md)
+
+2) vercel postgres config 👉 [vercel-postgres-Help](https://github.com/SoraWebui/SoraWebui/blob/login/help/vercel-postgres.zh-CN.md)
 
 ### 5. 运行
 
