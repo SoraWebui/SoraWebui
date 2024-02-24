@@ -8,7 +8,7 @@ SoraWebui は、ユーザーがテキストを使って OpenAI の Sora モデ�
 # プロジェクトプラン
 - ✅ 単語で動画を生成 ([FakeSoraAPI](https://github.com/SoraWebui/FakeSoraAPI) を使用):
 
-  この機能は、main branch または tag version-0.1 で見ることができます
+  この機能は、👉 [main](https://github.com/SoraWebui/SoraWebui/tree/main) または 👉 [version-0.1](https://github.com/SoraWebui/SoraWebui/tree/version-0.1) で見ることができます
 
 - [ ] Google でログイン:
 
