@@ -10,9 +10,9 @@ SoraWebui は、ユーザーがテキストを使って OpenAI の Sora モデ�
 
   この機能は、👉 [main](https://github.com/SoraWebui/SoraWebui/tree/main) または 👉 [version-0.1](https://github.com/SoraWebui/SoraWebui/tree/version-0.1) で見ることができます
 
-- [ ] Google でログイン:
+- ✅ Google でログイン:
 
-  準備中
+  この機能は、👉 [login](https://github.com/SoraWebui/SoraWebui/tree/login) で見ることができます
 
 - [ ] Stripe 決済：
 
@@ -54,9 +54,33 @@ NEXT_PUBLIC_SITE_URL=http://localhost
 OPENAI_API_KEY=sk-XXXXXX
 OPENAI_API_BASE_URL=http://localhost:8081
 OPENAI_API_MODEL=sora-1.0-turbo
-```
 
-### 4. 実行
+# vercel postgres config
+POSTGRES_URL=
+POSTGRES_PRISMA_URL=
+POSTGRES_URL_NO_SSL=
+POSTGRES_URL_NON_POOLING=
+POSTGRES_USER=
+POSTGRES_HOST=
+POSTGRES_PASSWORD=
+POSTGRES_DATABASE=
+
+# Google auth config
+GOOGLE_CLIENT_ID=
+GOOGLE_SECRET_ID=
+
+# NEXTAUTH config
+# create command: openssl rand -base64 32
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=http://localhost
+
+```
+### 4. Additional configuration
+
+> a. Google auth config 👉 [Google-Auth-Help](https://github.com/SoraWebui/SoraWebui/blob/login/help/Google-Auth.md)
+> b. vercel postgres config 👉 [vercel-postgres-Help](https://github.com/SoraWebui/SoraWebui/blob/login/help/vercel-postgres.md)
+
+### 5. 実行
 
 ```bash
 yarn dev
@@ -66,7 +90,7 @@ npm run dev
 pnpm dev
 ```
 
-### 5. [http://localhost](http://localhost) をブラウザで開いてご覧ください。
+### 6. [http://localhost](http://localhost) をブラウザで開いてご覧ください。
 ![success_deploy.jpg](https://sorawebui.com/success_deploy.jpg)
 
 

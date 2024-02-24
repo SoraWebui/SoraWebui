@@ -9,9 +9,9 @@ SoraWebui 是一个开源项目，允许用户使用 OpenAI 的 Sora 模型使�
 
   您可以在 👉 [main](https://github.com/SoraWebui/SoraWebui/tree/main) 或 👉 [version-0.1](https://github.com/SoraWebui/SoraWebui/tree/version-0.1) 中体验该功能
 
-- [ ] 使用谷歌登录:
+- ✅ 使用谷歌登录:
 
-  即将推出
+  您可以在 👉 [login](https://github.com/SoraWebui/SoraWebui/tree/login) 中体验该功能
 
 - [ ] Stripe支付：
 
@@ -53,9 +53,33 @@ NEXT_PUBLIC_SITE_URL=http://localhost
 OPENAI_API_KEY=sk-XXXXXX
 OPENAI_API_BASE_URL=http://localhost:8081
 OPENAI_API_MODEL=sora-1.0-turbo
-```
 
-### 4. 运行
+# vercel postgres config
+POSTGRES_URL=
+POSTGRES_PRISMA_URL=
+POSTGRES_URL_NO_SSL=
+POSTGRES_URL_NON_POOLING=
+POSTGRES_USER=
+POSTGRES_HOST=
+POSTGRES_PASSWORD=
+POSTGRES_DATABASE=
+
+# Google auth config
+GOOGLE_CLIENT_ID=
+GOOGLE_SECRET_ID=
+
+# NEXTAUTH config
+# create command: openssl rand -base64 32
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=http://localhost
+
+```
+### 4. 额外的配置
+
+> a. Google auth config 👉 [Google-Auth-Help](https://github.com/SoraWebui/SoraWebui/blob/login/help/Google-Auth.zh-CN.md)
+> b. vercel postgres config 👉 [vercel-postgres-Help](https://github.com/SoraWebui/SoraWebui/blob/login/help/vercel-postgres.zh-CN.md)
+
+### 5. 运行
 
 ```bash
 yarn dev
@@ -65,7 +89,7 @@ npm run dev
 pnpm dev
 ```
 
-### 4. 在浏览器打开 [http://localhost](http://localhost)
+### 6. 在浏览器打开 [http://localhost](http://localhost)
 ![success_deploy.jpg](https://sorawebui.com/success_deploy.jpg)
 
 
