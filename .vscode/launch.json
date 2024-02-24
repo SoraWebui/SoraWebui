@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Attach to Kubernetes Pod (Java)",
+            "type": "cloudcode.kubernetes",
+            "request": "attach",
+            "language": "Java",
+            "debugPort": 50005,
+            "podSelector": {
+                "app": "deployment-name"
+            }
+        },
+        {
+            "name": "Deploy Cloud Function",
+            "type": "cloudcode.cloudfunctions",
+            "request": "launch",
+            "functionName": "newme",
+            "gen": "GEN_2",
+            "revision": "",
+            "entryPoint": "helloWorld",
+            "testInput": "",
+            "region": "asia-east1",
+            "runtime": "go119"
+        }
+    ]
+}
