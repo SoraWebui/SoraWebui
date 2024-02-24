@@ -5,6 +5,7 @@ import {getTranslations, unstable_setRequestLocale} from 'next-intl/server';
 import {ReactNode} from 'react';
 import {locales} from '~/config';
 import { CommonProvider } from '~/context/common-context';
+import { NextAuthProvider } from '~/context/next-auth-context';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -45,9 +46,11 @@ export default async function LocaleLayout({
       />
     </head>
     <body suppressHydrationWarning={true} className={clsx(inter.className, 'flex h-full flex-col bg-[#020d24]')}>
-    <CommonProvider>
-      {children}
-    </CommonProvider>
+    <NextAuthProvider>
+      <CommonProvider>
+        {children}
+      </CommonProvider>
+    </NextAuthProvider>
     </body>
     </html>
   );

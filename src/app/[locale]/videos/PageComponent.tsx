@@ -8,6 +8,7 @@ const PageComponent = ({
                          locale = '',
                          videosLanguageText,
                          indexLanguageText,
+                         authLanguageText
                        }) => {
 
   const handleMouseEnter = (event) => {
@@ -26,7 +27,12 @@ const PageComponent = ({
         locale={locale}
         page={"/videos"}
       />
-      <Header locale={locale} page={"videos"} indexLanguageText={indexLanguageText}/>
+      <Header
+        locale={locale}
+        page={"videos"}
+        indexLanguageText={indexLanguageText}
+        authLanguageText={authLanguageText}
+      />
 
       <div className={"mb-8"}>
         <h2

@@ -17,6 +17,14 @@
     "soraResultTitle": "生成結果",
     "moreExample": "その他の動画"
   },
+  "autoh": {
+    "loginText": "ログイン",
+    "loginModalDesc": "ログインして続行してください",
+    "loginModalButtonText": "Googleでログイン",
+    "logoutModalDesc": "ログアウトしますか?",
+    "confirmButtonText": "確認する",
+    "cancelButtonText": "キャンセル"
+  },
   "privacyPolicy": {
     "title": "プライバシーポリシー｜SoraWebui",
     "mainDescription": "SoraWebuiは、OpenAIのSoraモデルを使用してユーザーが簡単にテキストから動画を作成できるオープンソースのプラットフォームです。",

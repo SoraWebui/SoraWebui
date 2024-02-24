@@ -6,6 +6,16 @@ export default async function IndexPage({params: {locale = ''}}) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
+  const tAuth = await getTranslations('auth');
+  const authLanguageText = {
+    loginText: tAuth('loginText'),
+    loginModalDesc: tAuth('loginModalDesc'),
+    loginModalButtonText: tAuth('loginModalButtonText'),
+    logoutModalDesc: tAuth('logoutModalDesc'),
+    confirmButtonText: tAuth('confirmButtonText'),
+    cancelButtonText: tAuth('cancelButtonText'),
+  }
+
   const tIndex = await getTranslations('IndexPage');
   const indexLanguageText = {
     title: tIndex('title'),
@@ -44,6 +54,7 @@ export default async function IndexPage({params: {locale = ''}}) {
       indexLanguageText={indexLanguageText}
       initVideoList={initVideoList}
       questionText={questionText}
+      authLanguageText={authLanguageText}
     >
 
     </PageComponent>

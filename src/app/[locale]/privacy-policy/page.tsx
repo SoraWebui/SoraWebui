@@ -6,6 +6,16 @@ export default async function PageContent({params: {locale = ''}}) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
+  const tAuth = await getTranslations('auth');
+  const authLanguageText = {
+    loginText: tAuth('loginText'),
+    loginModalDesc: tAuth('loginModalDesc'),
+    loginModalButtonText: tAuth('loginModalButtonText'),
+    logoutModalDesc: tAuth('logoutModalDesc'),
+    confirmButtonText: tAuth('confirmButtonText'),
+    cancelButtonText: tAuth('cancelButtonText'),
+  }
+
   const t = await getTranslations('privacyPolicy');
   const tIndex = await getTranslations('IndexPage');
   const indexLanguageText = {
@@ -27,6 +37,7 @@ export default async function PageContent({params: {locale = ''}}) {
       locale={locale}
       data={t}
       indexLanguageText={indexLanguageText}
+      authLanguageText={authLanguageText}
     >
     </PageComponent>
   )

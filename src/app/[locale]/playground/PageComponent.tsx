@@ -11,22 +11,28 @@ import Link from "next/link";
 const PageComponent = ({
                          locale = '',
                          indexLanguageText,
-                         playgroundText
+                         playgroundText,
+                         authLanguageText
                        }) => {
   const router = useRouter();
 
   const [textStr, setTextStr] = useState('');
-  const {setShowGeneratingModal, setShowLoadingModal} = useCommonContext();
-
+  const {setShowGeneratingModal, setShowLoadingModal, setShowLoginModal} = useCommonContext();
+  const {userData} = useCommonContext();
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (!textStr) {
       return;
     }
+    if (!userData) {
+      setShowLoginModal(true);
+      return;
+    }
     setShowGeneratingModal(true);
     const body = {
-      prompt: textStr
+      prompt: textStr,
+      user_id: userData?.user_id
     };
     const response = await fetch(`/${locale}/api/generate`, {
       method: 'POST',
@@ -44,30 +50,6 @@ const PageComponent = ({
       }
       setVideo(video);
       localStorage.setItem('video', JSON.stringify(video));
-
-      // add storage
-      const videoHistoryListStr = localStorage.getItem('videoHistoryList');
-      if (!videoHistoryListStr) {
-        const videoHistoryList = [];
-        videoHistoryList.unshift(video);
-        localStorage.setItem('videoHistoryList', JSON.stringify(videoHistoryList));
-      } else {
-        const videoHistoryList = JSON.parse(videoHistoryListStr);
-        // check exist
-        let exist = false;
-        for (let i = 0; i < videoHistoryList.length; i++) {
-          const videoHistory = videoHistoryList[i];
-          if (videoHistory.revised_prompt == video.revised_prompt) {
-            exist = true;
-            return;
-          }
-        }
-        if (!exist) {
-          videoHistoryList.unshift(video);
-          // const newList = videoHistoryList.slice(0, 3);
-          localStorage.setItem('videoHistoryList', JSON.stringify(videoHistoryList));
-        }
-      }
     }
   }
 
@@ -91,7 +73,12 @@ const PageComponent = ({
         locale={locale}
         page={"/playground"}
       />
-      <Header locale={locale} page={"playground"} indexLanguageText={indexLanguageText}/>
+      <Header
+        locale={locale}
+        page={"playground"}
+        indexLanguageText={indexLanguageText}
+        authLanguageText={authLanguageText}
+      />
       <div className={"my-auto"}>
         <div className="block overflow-hidden bg-[#020d24] bg-cover bg-center text-white"
              style={{backgroundImage: 'https://assets.website-files.com/6502af467b2a8c4ee8159a5b/6502af467b2a8c4ee8159a77_Group%2047929.svg'}}>

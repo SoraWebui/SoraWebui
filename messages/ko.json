@@ -17,6 +17,14 @@
     "soraResultTitle": "결과",
     "moreExample": "더 많은 예제 비디오"
   },
+  "auth": {
+    "loginText": "로그인",
+    "loginModalDesc": "로그인하여 계속하세요.",
+    "loginModalButtonText": "Google로 로그인하세요",
+    "logoutModalDesc": "로그아웃하시겠습니까?",
+    "confirmButtonText": "확인하다",
+    "cancelButtonText": "취소"
+  },
   "privacyPolicy": {
     "title": "개인정보 보호 정책 | SoraWebui",
     "mainDescription": "SoraWebui는 사용자가 OpenAI의 Sora 모델을 사용하여 텍스트에서 쉽게 비디오를 생성할 수 있도록 하는 오픈 소스 플랫폼입니다.",

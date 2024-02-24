@@ -3,7 +3,7 @@
     "lang": "en",
     "language": "English",
     "languageInChineseSimple": "英语",
-    "title": "SoraWebui",
+    "title": "SoraWebui: Open Source Text-to-Video Webui with OpenAI's Sora Model.",
     "description": "SoraWebui is an open-source platform enabling users to easily create videos from text with OpenAI's Sora model.",
     "loadingText": "Loading...",
     "generateText": "Generating...",
@@ -16,6 +16,14 @@
     "soraWorksTitle": "Works",
     "soraResultTitle": "Result",
     "moreExample": "more example video"
+  },
+  "auth": {
+    "loginText": "Log in",
+    "loginModalDesc": "Please continue by logging in",
+    "loginModalButtonText": "Login with Google",
+    "logoutModalDesc": "Are you want to log out ?",
+    "confirmButtonText": "Confirm",
+    "cancelButtonText": "Cancel"
   },
   "privacyPolicy": {
     "title": "Privacy Policy ｜ SoraWebui",

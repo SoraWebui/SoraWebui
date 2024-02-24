@@ -12,13 +12,14 @@ const PageComponent = ({
                          locale = '',
                          indexLanguageText,
                          initVideoList = [],
-                         questionText
+                         questionText,
+                         authLanguageText
                        }) => {
   const router = useRouter();
 
   const [textStr, setTextStr] = useState('');
-  const {setShowGeneratingModal, setShowLoadingModal} = useCommonContext();
-
+  const {setShowGeneratingModal, setShowLoadingModal, setShowLoginModal} = useCommonContext();
+  const {userData} = useCommonContext();
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -26,9 +27,14 @@ const PageComponent = ({
       setVideoList(randomVideo(2));
       return;
     }
+    if (!userData) {
+      setShowLoginModal(true);
+      return;
+    }
     setShowGeneratingModal(true);
     const body = {
-      prompt: textStr
+      prompt: textStr,
+      user_id: userData?.user_id
     };
     const response = await fetch(`/${locale}/api/generate`, {
       method: 'POST',
@@ -43,32 +49,6 @@ const PageComponent = ({
       const video = {
         revised_prompt: result.data[0].revised_prompt,
         url: result.data[0].url
-      }
-
-      // add storage
-      const videoHistoryListStr = localStorage.getItem('videoHistoryList');
-      if (!videoHistoryListStr) {
-        const videoHistoryList = [];
-        videoHistoryList.unshift(video);
-        localStorage.setItem('videoHistoryList', JSON.stringify(videoHistoryList));
-      } else {
-        const videoHistoryList = JSON.parse(videoHistoryListStr);
-        // check exist
-        let exist = false;
-        for (let i = 0; i < videoHistoryList.length; i++) {
-          const videoHistory = videoHistoryList[i];
-          if (videoHistory.revised_prompt == video.revised_prompt) {
-            exist = true;
-            localStorage.setItem('video', JSON.stringify(video));
-            router.push(`/${locale}/playground`)
-            return;
-          }
-        }
-        if (!exist) {
-          videoHistoryList.unshift(video);
-          // const newList = videoHistoryList.slice(0, 3);
-          localStorage.setItem('videoHistoryList', JSON.stringify(videoHistoryList));
-        }
       }
       localStorage.setItem('video', JSON.stringify(video));
       router.push(`/${locale}/playground`)
@@ -93,7 +73,11 @@ const PageComponent = ({
         locale={locale}
         page={""}
       />
-      <Header locale={locale} indexLanguageText={indexLanguageText}/>
+      <Header
+        locale={locale}
+        indexLanguageText={indexLanguageText}
+        authLanguageText={authLanguageText}
+      />
       <div>
         <div className="block overflow-hidden bg-[#020d24] bg-cover bg-center text-white"
              style={{backgroundImage: 'https://assets.website-files.com/6502af467b2a8c4ee8159a5b/6502af467b2a8c4ee8159a77_Group%2047929.svg'}}>

@@ -6,36 +6,60 @@ import {useState} from "react";
 import HeadInfo from "~/components/HeadInfo";
 import {useInterval} from "ahooks";
 import Link from "next/link";
+import {useCommonContext} from "~/context/common-context";
 
 const PageComponent = ({
                          locale = '',
                          indexLanguageText,
-                         worksText
+                         worksText,
+                         authLanguageText
                        }) => {
   const router = useRouter();
 
   const [videoHistoryList, setVideoHistoryList] = useState([]);
-  const [intervalLocalStorage, setIntervalLocalStorage] = useState(500);
+  const {setShowLoadingModal} = useCommonContext();
+  const {userData} = useCommonContext();
+  const [intervalWorkList, setIntervalWorkList] = useState(1000);
+
+  const getCurrentWorkList = async () => {
+    if (!userData) {
+
+    } else {
+      setIntervalWorkList(undefined);
+      localStorage.removeItem('videoHistoryList');
+      const requestData = {
+        user_id: userData.user_id
+      }
+      setShowLoadingModal(true);
+      const response = await fetch(`/${locale}/api/getWorkList`, {
+        method: 'POST',
+        body: JSON.stringify(requestData)
+      });
+      const result = await response.json();
+      setShowLoadingModal(false);
+      setVideoHistoryList(result);
+    }
+  }
 
   useInterval(() => {
-    const videoHistoryListStr = localStorage.getItem('videoHistoryList');
-    if (videoHistoryListStr) {
-      const videoHistoryList = JSON.parse(videoHistoryListStr);
-      setVideoHistoryList(videoHistoryList)
-    } else {
-      setVideoHistoryList([])
-    }
-  }, intervalLocalStorage);
+    getCurrentWorkList()
+  }, intervalWorkList);
+
 
   return (
     <>
       <HeadInfo
-        title={worksText.title}
-        description={worksText.description}
+        title={indexLanguageText.title}
+        description={indexLanguageText.description}
         locale={locale}
         page={"/works"}
       />
-      <Header locale={locale} page={"works"} indexLanguageText={indexLanguageText}/>
+      <Header
+        locale={locale}
+        page={"works"}
+        indexLanguageText={indexLanguageText}
+        authLanguageText={authLanguageText}
+      />
       <div className={"my-auto"}>
         <div className="block overflow-hidden bg-[#020d24] bg-cover bg-center text-white"
              style={{backgroundImage: 'https://assets.website-files.com/6502af467b2a8c4ee8159a5b/6502af467b2a8c4ee8159a77_Group%2047929.svg'}}>

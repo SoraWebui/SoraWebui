@@ -6,6 +6,7 @@ const PageComponent = ({
                          locale = '',
                          data,
                          indexLanguageText,
+                         authLanguageText
                        }) => {
 
   return (
@@ -20,6 +21,7 @@ const PageComponent = ({
         locale={locale}
         page={'privacy-policy'}
         indexLanguageText={indexLanguageText}
+        authLanguageText={authLanguageText}
       />
       <main className="w-[95%] md:w-[65%] lg:w-[55%] 2xl:w-[45%] mx-auto h-full my-8">
         <div className="p-6 prose mx-auto text-gray-300">
