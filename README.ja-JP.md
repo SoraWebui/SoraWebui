@@ -75,7 +75,7 @@ NEXTAUTH_SECRET=
 NEXTAUTH_URL=http://localhost
 
 ```
-### 4. Additional configuration
+### 4. 追加の構成
 
 > a. Google auth config 👉 [Google-Auth-Help](https://github.com/SoraWebui/SoraWebui/blob/login/help/Google-Auth.md)
 > b. vercel postgres config 👉 [vercel-postgres-Help](https://github.com/SoraWebui/SoraWebui/blob/login/help/vercel-postgres.md)
