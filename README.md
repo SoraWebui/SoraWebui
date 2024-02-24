@@ -2,7 +2,7 @@
 SoraWebui is an open-source project that simplifies video creation by allowing users to generate videos online with OpenAI's Sora model using text, featuring easy one-click website deployment.
 👉 [SoraWebui](https://sorawebui.com)
 
-English | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README.zh-CN.md) | [日本語](https://github.com/SoraWebui/SoraWebui/blob/main/README.ja-JP.md)
+English | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README.zh-CN.md) | [日本語](https://github.com/SoraWebui/SoraWebui/blob/main/README.ja-JP.md) | [हिंदी](https://github.com/SoraWebui/SoraWebui/blob/main/README.hi.md)
 
 
 # Project Plan
@@ -23,7 +23,7 @@ English | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README
   Waiting for OpenAI launch Sora's API, then we will launch this feature.
 
 
-## Quick Started
+## Getting Started:
 
 ### Deploy on Vercel
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSoraWebui%2FSoraWebui&project-name=SoraWebui&repository-name=SoraWebui&external-id=https%3A%2F%2Fgithub.com%2FSoraWebui%2FSoraWebui%2Ftree%2Fmain)
