@@ -2,7 +2,7 @@
 SoraWebui は、ユーザーがテキストを使って OpenAI の Sora モデルでオンラインビデオを生成できるようにすることで、ビデオ作成を簡素化するオープンソースプロジェクトです。
 👉 [SoraWebui](https://sorawebui.com)
 
-[English](https://github.com/SoraWebui/SoraWebui/blob/main/README.md) | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README.zh-CN.md) | 日本語
+[English](https://github.com/SoraWebui/SoraWebui/blob/login/README.md) | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/login/README.zh-CN.md) | 日本語
 
 
 # プロジェクトプラン
