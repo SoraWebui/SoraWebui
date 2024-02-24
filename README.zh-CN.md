@@ -9,9 +9,9 @@ SoraWebui 是一个开源项目，允许用户使用 OpenAI 的 Sora 模型使�
 
   您可以在 👉 [main](https://github.com/SoraWebui/SoraWebui/tree/main) 或 👉 [version-0.1](https://github.com/SoraWebui/SoraWebui/tree/version-0.1) 中体验该功能
 
-- [ ] 使用谷歌登录:
+- ✅ 使用谷歌登录:
 
-  即将推出
+  您可以在 👉 [login](https://github.com/SoraWebui/SoraWebui/tree/login) 中体验该功能
 
 - [ ] Stripe支付：
 

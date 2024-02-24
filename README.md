@@ -10,9 +10,9 @@ English | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README
 
   You can see this feature in 👉 [main](https://github.com/SoraWebui/SoraWebui/tree/main) or 👉 [version-0.1](https://github.com/SoraWebui/SoraWebui/tree/version-0.1)
 
-- [ ] Login with Google:
+- ✅ Login with Google:
 
-  Coming soon
+  You can see this feature in 👉 [login](https://github.com/SoraWebui/SoraWebui/tree/login)
 
 - [ ] Stripe payment：
 
