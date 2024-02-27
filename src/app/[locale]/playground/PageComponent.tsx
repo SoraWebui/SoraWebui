@@ -21,6 +21,7 @@ const PageComponent = ({
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    setChooseAPI('FakeSora');
     if (!textStr) {
       return;
     }
@@ -83,6 +84,8 @@ const PageComponent = ({
     }
   }, intervalLocalStorage);
 
+  const [chooseAPI, setChooseAPI] = useState('FakeSora');
+
   return (
     <>
       <HeadInfo
@@ -122,6 +125,33 @@ const PageComponent = ({
                       maxLength={1000}
                     />
                   </div>
+                  <div className="flex justify-center items-center space-x-3 px-2 py-2 bg-white text-black">
+                    <span
+                      className={`cursor-pointer p-2 rounded-lg mx-0.5 flex items-center mt-1 border ${chooseAPI == 'FakeSora' ? 'border-[#ffa11b]' : 'border-gray-200'}`}
+                      onClick={() => setChooseAPI('FakeSora')}
+                    >
+                      <span>FakeSora</span>
+                    </span>
+                    <span
+                      className={`cursor-pointer p-2 rounded-lg mx-0.5 flex items-center mt-1 border ${chooseAPI == 'Sora' ? 'border-[#ffa11b]' : 'border-gray-200'}`}
+                      onClick={() => setChooseAPI('Sora')}
+                    >
+                      <span>Sora</span>
+                    </span>
+                  </div>
+                  {
+                    chooseAPI == 'FakeSora' ?
+                      <div className="flex justify-center items-center space-x-3 px-2 bg-white text-red-400">
+                        {indexLanguageText.fakeSoraTip}
+                      </div>
+                      :
+                      chooseAPI == 'Sora' ?
+                        <div className="flex justify-center items-center space-x-3 px-2 bg-white text-red-400">
+                          {indexLanguageText.soraTip}
+                        </div>
+                        :
+                        null
+                  }
                   <div className="inset-x-px bottom-1 bg-white">
                     <div
                       className="flex justify-center items-center space-x-3 border-t border-gray-200 px-2 py-2">

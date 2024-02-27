@@ -15,7 +15,9 @@
     "prompt": "Prompt",
     "soraWorksTitle": "Works",
     "soraResultTitle": "Result",
-    "moreExample": "more example video"
+    "moreExample": "more example video",
+    "fakeSoraTip": "FakeSora is designed to simulate the yet-to-be-released OpenAI Sora API.",
+    "soraTip": "OpenAI has not released Sora's API yet."
   },
   "privacyPolicy": {
     "title": "Privacy Policy ｜ SoraWebui",

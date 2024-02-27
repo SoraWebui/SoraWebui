@@ -15,7 +15,9 @@
     "prompt": "提示词",
     "soraWorksTitle": "作品列表",
     "soraResultTitle": "结果",
-    "moreExample": "更多示例视频"
+    "moreExample": "更多示例视频",
+    "fakeSoraTip": "FakeSora 旨在模拟尚未发布的 OpenAI Sora API。",
+    "soraTip": "OpenAI 尚未发布 Sora 的 API。"
   },
   "privacyPolicy": {
     "title": "隐私政策 ｜ SoraWebui",

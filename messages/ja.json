@@ -15,7 +15,9 @@
     "prompt": "プロンプト",
     "soraWorksTitle": "作品",
     "soraResultTitle": "生成結果",
-    "moreExample": "その他の動画"
+    "moreExample": "その他の動画",
+    "fakeSoraTip": "FakeSora は、まだリリースされていない OpenAI Sora API をシミュレートするように設計されています。",
+    "soraTip": "OpenAIはSoraのAPIをまだリリースしていません。"
   },
   "privacyPolicy": {
     "title": "プライバシーポリシー｜SoraWebui",
