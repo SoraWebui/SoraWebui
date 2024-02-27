@@ -1,41 +1,13 @@
 import PageComponent from "./PageComponent";
-import {getTranslations, unstable_setRequestLocale} from 'next-intl/server';
-import {allVideoList} from "~/data/openaiVideo";
+import {unstable_setRequestLocale} from 'next-intl/server';
+import {getAuthLanguageText, getIndexLanguageText, getVideosPageLanguageText} from "~/configs/languageText";
 
 export default async function Videos({params: {locale = ''}}) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
-
-  const tAuth = await getTranslations('auth');
-  const authLanguageText = {
-    loginText: tAuth('loginText'),
-    loginModalDesc: tAuth('loginModalDesc'),
-    loginModalButtonText: tAuth('loginModalButtonText'),
-    logoutModalDesc: tAuth('logoutModalDesc'),
-    confirmButtonText: tAuth('confirmButtonText'),
-    cancelButtonText: tAuth('cancelButtonText'),
-  }
-
-  const tIndex = await getTranslations('IndexPage');
-  const indexLanguageText = {
-    title: tIndex('title'),
-    description: tIndex('description'),
-    loadingText: tIndex('loadingText'),
-    generateText: tIndex('generateText'),
-    buttonText: tIndex('buttonText'),
-    placeholderText: tIndex('placeholderText'),
-    h1Text: tIndex('h1Text'),
-    pDescription: tIndex('pDescription'),
-    soraVideoExample: tIndex('soraVideoExample'),
-    prompt: tIndex('prompt'),
-    moreExample: tIndex('moreExample'),
-  };
-
-  const tVideosPage = await getTranslations('videosPage');
-  const videosLanguageText = {
-    title: tVideosPage('title'),
-    description: tVideosPage('description'),
-  }
+  const indexLanguageText = await getIndexLanguageText();
+  const videosLanguageText = getVideosPageLanguageText();
+  const authLanguageText = await getAuthLanguageText();
 
   return (
     <PageComponent
