@@ -98,3 +98,6 @@ pnpm dev
 # 重要
 SoraWebui が正しく機能するには [FakeSoraAPI](https://github.com/SoraWebui/FakeSoraAPI) が必要です。
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=SoraWebui/SoraWebui&type=Date)](https://star-history.com/#SoraWebui/SoraWebui&Date)
