@@ -19,7 +19,7 @@
   },
   "privacyPolicy": {
     "title": "개인정보 보호 정책 | SoraWebui",
-    "mainDescription": "SoraWebui는 사용자가 OpenAI의 Sora 모델을 사용하여 텍스트에서 쉽게 비디오를 생성할 수 있도록 하는 오픈 소스 플랫폼입니다.",
+    "description": "SoraWebui는 사용자가 OpenAI의 Sora 모델을 사용하여 텍스트에서 쉽게 비디오를 생성할 수 있도록 하는 오픈 소스 플랫폼입니다.",
     "h1": "개인정보 보호 정책",
     "date": "마지막 업데이트 날짜: 2024년 2월 19일",
     "desc": "SoraWebui를 선택해 주셔서 감사합니다! 본 개인정보 보호 정책은 당사 웹사이트를 이용할 때 어떻게 정보를 수집, 사용 및 보호하는지에 대해 설명합니다.",
@@ -39,7 +39,7 @@
   },
   "termsOfService": {
     "title": "서비스 이용 약관 | SoraWebui",
-    "mainDescription": "SoraWebui는 사용자가 OpenAI의 Sora 모델을 사용하여 텍스트에서 쉽게 비디오를 생성할 수 있도록 하는 오픈 소스 플랫폼입니다.",
+    "description": "SoraWebui는 사용자가 OpenAI의 Sora 모델을 사용하여 텍스트에서 쉽게 비디오를 생성할 수 있도록 하는 오픈 소스 플랫폼입니다.",
     "h1": "서비스 이용 약관",
     "date": "마지막 업데이트 날짜: 2024년 2월 19일",
     "desc": "본 서비스 이용 약관(\"약관\")은 SoraWebui(\"서비스\")에 대한 액세스 및 이용을 규제하며, SoraWebui(\"우리\" 또는 \"당사\")에서 제공됩니다. 서비스에 액세스하거나 이용함으로써, 당신은 본 약관에 동의하는 것입니다.",
