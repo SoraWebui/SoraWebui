@@ -15,6 +15,8 @@ export const getIndexLanguageText = async () => {
     prompt: tIndex('prompt'),
     moreExample: tIndex('moreExample'),
     soraResultTitle: tIndex('soraResultTitle'),
+    fakeSoraTip: tIndex('fakeSoraTip'),
+    soraTip: tIndex('soraTip'),
   };
 }
 

@@ -15,7 +15,9 @@
     "prompt": "프롬프트",
     "soraWorksTitle": "작품",
     "soraResultTitle": "결과",
-    "moreExample": "더 많은 예제 비디오"
+    "moreExample": "더 많은 예제 비디오",
+    "fakeSoraTip": "FakeSora 는 아직 출시되지 않은 OpenAI Sora API를 시뮬레이션하도록 설계되었습니다.",
+    "soraTip": "OpenAI는 아직 Sora의 API를 출시하지 않았습니다."
   },
   "auth": {
     "loginText": "로그인",
