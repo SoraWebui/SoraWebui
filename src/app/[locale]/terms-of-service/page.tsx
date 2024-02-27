@@ -1,4 +1,4 @@
-import {getTranslations, unstable_setRequestLocale} from 'next-intl/server';
+import {unstable_setRequestLocale} from 'next-intl/server';
 
 import PageComponent from './PageComponent';
 import {getIndexLanguageText, getTermsOfServiceLanguageText} from "~/configs/languageText";
