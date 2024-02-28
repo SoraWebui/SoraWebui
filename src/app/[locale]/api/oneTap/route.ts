@@ -1,4 +1,3 @@
-import {headers} from "next/headers";
 import {checkAndSaveUser} from "~/servers/user";
 
 const { OAuth2Client } = require('google-auth-library');
