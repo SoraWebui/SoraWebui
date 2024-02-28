@@ -14,6 +14,7 @@ export default function LogoutModal({
   const {showLogoutModal, setShowLogoutModal} = useCommonContext();
 
   const confirmButton = () => {
+    sessionStorage.removeItem("user_id");
     signOut({callbackUrl: redirectPath}).then(r => console.log(r))
   }
 

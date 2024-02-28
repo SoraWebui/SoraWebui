@@ -31,3 +31,48 @@ export const checkAndSaveUser = async (name:string, email:string, image:string) 
     return user;
   }
 }
+
+
+export const getUserById = async (user_id) => {
+  const results = await sql`select * from user_info where user_id=${user_id};`;
+  const users = results.rows;
+  if (users.length > 0) {
+    const user = users[0];
+    return {
+      user_id: user_id,
+      name: user.name,
+      email: user.email,
+      image: user.image,
+      status: 1
+    }
+  }
+  return {
+    user_id: user_id,
+    name: '',
+    email: '',
+    image: '',
+    status: 0
+  }
+}
+
+export const getUserByEmail = async (email) => {
+  const results = await sql`select * from user_info where email=${email};`;
+  const users = results.rows;
+  if (users.length > 0) {
+    const user = users[0];
+    return {
+      user_id: user.user_id,
+      name: user.name,
+      email: email,
+      image: user.image,
+      status: 1
+    }
+  }
+  return {
+    user_id: '',
+    name: '',
+    email: email,
+    image: '',
+    status: 0
+  }
+}
