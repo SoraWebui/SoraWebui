@@ -14,9 +14,9 @@ SoraWebui は、ユーザーがテキストを使って OpenAI の Sora モデ�
 
   この機能は、👉 [login](https://github.com/SoraWebui/SoraWebui/tree/login) または 👉 [version-0.2](https://github.com/SoraWebui/SoraWebui/tree/version-0.2) で見ることができます
 
-- [ ] Google ワンクリックログイン:
+- ✅ Google ワンクリックログイン:
 
-  準備中
+  この機能は、👉 [login](https://github.com/SoraWebui/SoraWebui/tree/login) または 👉 [version-0.3](https://github.com/SoraWebui/SoraWebui/tree/version-0.3) で見ることができます
 
 - [ ] Stripe 決済：
 

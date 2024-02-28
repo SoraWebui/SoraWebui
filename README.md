@@ -14,9 +14,9 @@ English | [简体中文](https://github.com/SoraWebui/SoraWebui/blob/main/README
 
   You can see this feature in 👉 [login](https://github.com/SoraWebui/SoraWebui/tree/login) or 👉 [version-0.2](https://github.com/SoraWebui/SoraWebui/tree/version-0.2)
 
-- [ ] Google One Tap Login:
+- ✅ Google One Tap Login:
 
-  Coming soon
+  You can see this feature in 👉 [login](https://github.com/SoraWebui/SoraWebui/tree/login) or 👉 [version-0.3](https://github.com/SoraWebui/SoraWebui/tree/version-0.3)
 
 - [ ] Stripe payment：
 
