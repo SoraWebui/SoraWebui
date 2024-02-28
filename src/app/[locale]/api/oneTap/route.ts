@@ -17,9 +17,6 @@ export async function POST(req: Request, res: Response) {
   let email = payload['email'];
   let image = payload['picture'];
 
-  const headerAll = headers();
-  const userIp = headerAll.get("x-forwarded-for");
-
   const result = await checkAndSaveUser(name, email, image);
 
   return Response.json(result);
