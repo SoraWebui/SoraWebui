@@ -20,7 +20,7 @@ export async function POST(req: Request, res: Response) {
   const headerAll = headers();
   const userIp = headerAll.get("x-forwarded-for");
 
-  const result = await checkAndSaveUser(name, email, image, userIp);
+  const result = await checkAndSaveUser(name, email, image);
 
   return Response.json(result);
 }
