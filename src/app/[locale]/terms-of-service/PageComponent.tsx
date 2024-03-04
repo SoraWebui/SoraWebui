@@ -41,7 +41,7 @@ const PageComponent = ({
           <h4 className={"text-white font-bold"}>{termsOfServiceLanguageText.h4_5}</h4>
           <p>
             {termsOfServiceLanguageText.h4_5_p}<a
-            href={`https://whooper.ai/${locale}/privacy-policy`}
+            href={`https://sorawebui.com/${locale}/privacy-policy`}
             className={"text-white"}>https://sorawebui.com/privacy-policy</a>
           </p>
           <h4 className={"text-white font-bold"}>{termsOfServiceLanguageText.h4_6}</h4>
