@@ -3,8 +3,8 @@
     "lang": "ja",
     "language": "日本語",
     "languageInChineseSimple": "日语",
-    "title": "SoraWebui：OpenAIのSoraモデルを使用したオープンソースのテキストから動画へのウェブインターフェース",
-    "description": "SoraWebuiはオープンソースプラットフォームで、OpenAIのSoraを使用して、テキストから動画を簡単に作成できるようにします。",
+    "title": "",
+    "description": "",
     "loadingText": "読み込み中...",
     "generateText": "生成中...",
     "buttonText": "生成",
@@ -20,8 +20,8 @@
     "soraTip": "OpenAIはSoraのAPIをまだリリースしていません。"
   },
   "privacyPolicy": {
-    "title": "プライバシーポリシー｜SoraWebui",
-    "description": "SoraWebuiは、OpenAIのSoraモデルを使用してユーザーが簡単にテキストから動画を作成できるオープンソースのプラットフォームです。",
+    "title": "プライバシーポリシー｜ ",
+    "description": "",
     "h1": "プライバシーポリシー",
     "date": "最終更新日：2024年2月19日",
     "desc": "SoraWebuiを選んでいただきありがとうございます！このプライバシーポリシーでは、当サイトをご利用いただく際の情報の収集、利用、保護方法についてご説明します。",
@@ -40,8 +40,8 @@
     "h4_6_p": "当社のプライバシーポリシーに関するご質問やご不明な点がございましたら、お問い合わせください。"
   },
   "termsOfService": {
-    "title": "利用規約｜SoraWebui",
-    "description": "SoraWebuiは、OpenAIのSoraモデルを使用してユーザーが簡単にテキストから動画を作成できるオープンソースのプラットフォームです。",
+    "title": "利用規約｜ ",
+    "description": "",
     "h1": "利用規約",
     "date": "最終更新日：2024年2月19日",
     "desc": "これらの利用規約（以下、「本規約」）は、SoraWebui（以下、「サービス」）へのアクセスおよび利用を規定し、SoraWebui（以下、「当社」または「私たち」）が提供します。サービスを利用することにより、これらの利用規約に拘束されることに同意します。",

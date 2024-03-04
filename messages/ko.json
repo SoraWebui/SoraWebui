@@ -3,8 +3,8 @@
     "lang": "ko",
     "language": "한국어",
     "languageInChineseSimple": "韩语",
-    "title": "SoraWebui: OpenAI의 Sora 모델을 사용한 오픈 소스 텍스트 대 비디오 Webui.",
-    "description": "SoraWebui는 사용자가 OpenAI의 Sora 모델을 사용하여 텍스트에서 쉽게 비디오를 생성할 수 있도록 하는 오픈 소스 플랫폼입니다.",
+    "title": "",
+    "description": "",
     "loadingText": "로딩 중...",
     "generateText": "생성 중...",
     "buttonText": "생성",
@@ -20,8 +20,8 @@
     "soraTip": "OpenAI는 아직 Sora의 API를 출시하지 않았습니다."
   },
   "privacyPolicy": {
-    "title": "개인정보 보호 정책 | SoraWebui",
-    "description": "SoraWebui는 사용자가 OpenAI의 Sora 모델을 사용하여 텍스트에서 쉽게 비디오를 생성할 수 있도록 하는 오픈 소스 플랫폼입니다.",
+    "title": "개인정보 보호 정책 | ",
+    "description": "",
     "h1": "개인정보 보호 정책",
     "date": "마지막 업데이트 날짜: 2024년 2월 19일",
     "desc": "SoraWebui를 선택해 주셔서 감사합니다! 본 개인정보 보호 정책은 당사 웹사이트를 이용할 때 어떻게 정보를 수집, 사용 및 보호하는지에 대해 설명합니다.",
@@ -40,8 +40,8 @@
     "h4_6_p": "개인정보 보호 정책에 관한 질문이나 문의 사항이 있으시면 저희에게 문의하십시오."
   },
   "termsOfService": {
-    "title": "서비스 이용 약관 | SoraWebui",
-    "description": "SoraWebui는 사용자가 OpenAI의 Sora 모델을 사용하여 텍스트에서 쉽게 비디오를 생성할 수 있도록 하는 오픈 소스 플랫폼입니다.",
+    "title": "서비스 이용 약관 | ",
+    "description": "",
     "h1": "서비스 이용 약관",
     "date": "마지막 업데이트 날짜: 2024년 2월 19일",
     "desc": "본 서비스 이용 약관(\"약관\")은 SoraWebui(\"서비스\")에 대한 액세스 및 이용을 규제하며, SoraWebui(\"우리\" 또는 \"당사\")에서 제공됩니다. 서비스에 액세스하거나 이용함으로써, 당신은 본 약관에 동의하는 것입니다.",

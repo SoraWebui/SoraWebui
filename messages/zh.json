@@ -3,8 +3,8 @@
     "lang": "en",
     "language": "简体中文",
     "languageInChineseSimple": "简体中文",
-    "title": "SoraWebui",
-    "description": "SoraWebui 是一个开源平台，使用户能够使用 OpenAI 的 Sora 模型轻松地从文本创建视频。",
+    "title": "",
+    "description": "",
     "loadingText": "加载中...",
     "generateText": "生成中...",
     "buttonText": "生成",
@@ -20,8 +20,8 @@
     "soraTip": "OpenAI 尚未发布 Sora 的 API。"
   },
   "privacyPolicy": {
-    "title": "隐私政策 ｜ SoraWebui",
-    "description": "SoraWebui 是一个开源平台，使用户能够使用 OpenAI 的 Sora 模型轻松地从文本创建视频。",
+    "title": "隐私政策 ｜ ",
+    "description": "",
     "h1": "隐私政策",
     "date": "最后更新日期：2024年2月19日",
     "desc": "感谢您选择 SoraWebui！本隐私政策概述了您在使用我们位于的网站时我们如何收集、使用和保护您的信息",
@@ -40,8 +40,8 @@
     "h4_6_p": "如果您对我们的隐私政策有任何疑问或顾虑，请通过以下方式与我们联系："
   },
   "termsOfService": {
-    "title": "服务条款｜ SoraWebui",
-    "description": "SoraWebui 是一个开源平台，使用户能够使用 OpenAI 的 Sora 模型轻松地从文本创建视频。",
+    "title": "服务条款｜ ",
+    "description": "",
     "h1": "服务条款",
     "date": "最后更新日期：2024年2月19日",
     "desc": "这些服务条款（“条款”）管辖您对 SoraWebui（“服务”）的访问和使用，由 SoraWebui（“我们”或“我们”）提供。通过访问或使用服务，您同意受这些条款的约束。",
