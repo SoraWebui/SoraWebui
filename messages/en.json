@@ -3,8 +3,8 @@
     "lang": "en",
     "language": "English",
     "languageInChineseSimple": "英语",
-    "title": "SoraWebui: Open Source Text-to-Video Webui with OpenAI's Sora Model.",
-    "description": "SoraWebui is an open-source platform enabling users to easily create videos from text with OpenAI's Sora model.",
+    "title": "",
+    "description": "",
     "loadingText": "Loading...",
     "generateText": "Generating...",
     "buttonText": "Generate",
@@ -28,8 +28,8 @@
     "cancelButtonText": "Cancel"
   },
   "privacyPolicy": {
-    "title": "Privacy Policy ｜ SoraWebui",
-    "description": "SoraWebui is an open-source platform enabling users to easily create videos from text with OpenAI's Sora model.",
+    "title": "Privacy Policy ｜ ",
+    "description": "",
     "h1": "Privacy Policy",
     "date": "Last updated: February 19, 2024",
     "desc": "Thank you for choosing SoraWebui! This Privacy Policy outlines how we collect, use, and protect your information when you use our website located at ",
@@ -48,8 +48,8 @@
     "h4_6_p": "If you have any questions or concerns regarding our Privacy Policy, please contact us at"
   },
   "termsOfService": {
-    "title": "Terms of Service ｜ SoraWebui",
-    "description": "SoraWebui is an open-source platform enabling users to easily create videos from text with OpenAI's Sora model.",
+    "title": "Terms of Service ｜ ",
+    "description": "",
     "h1": "Terms of Service",
     "date": "Last updated: February 19, 2024",
     "desc": "These Terms of Service (\"Terms\") govern your access to and use of SoraWebui (the \"Service\"), provided by SoraWebui (\"we\" or \"us\"). By accessing or using the Service, you agree to be bound by these Terms.",
